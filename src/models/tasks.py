@@ -12,7 +12,6 @@ class Task(Document):
     )
     created_at = DateTimeField(default=datetime.utcnow)
     updated_at = DateTimeField(default=datetime.utcnow)
-    deleted_at = DateTimeField(default=datetime.utcnow)
 
     def save(self, *args, **kwargs):
         self.updated_at = datetime.utcnow()
