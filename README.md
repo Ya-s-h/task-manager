@@ -164,7 +164,22 @@ This project is a backend service that manages "tasks" in a Unix-like fashion. I
  ```
 ## 📄 License
 
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for etails.
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+## 📝 Notes
+
+- Ensure that **MongoDB** is running locally before starting the application.
+- The valid task statuses are:
+
+  ```
+  ['pending', 'running', 'success', 'failure']
+  ```
+
+- Allowed status transitions:
+  - `pending` ➝ can transition to `running`
+  - `running` ➝ can transition to `success` or `failure`
+  - `success` ➝ no further transitions allowed
+  - `failure` ➝ no further transitions allowed
 
 ---
 
